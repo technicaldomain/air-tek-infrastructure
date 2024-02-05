@@ -1,0 +1,9 @@
+config:
+  aws:region: us-east-1
+  aws:profile: playground
+  aws:defaultTags:
+    tags:
+      stack: app-security-group
+      env: dev
+      team: air-tek
+  app-security-group:org: air-tek

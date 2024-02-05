@@ -1,0 +1,6 @@
+name: ecr
+runtime:
+  name: python
+  options:
+    virtualenv: ../venv
+description: ECR Repositories

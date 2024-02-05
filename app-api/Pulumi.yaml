@@ -1,0 +1,7 @@
+name: app-api
+runtime:
+  name: python
+  options:
+    virtualenv: ../venv
+description: Primary API for the app
+

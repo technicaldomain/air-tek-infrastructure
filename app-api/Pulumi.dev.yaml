@@ -1,0 +1,16 @@
+config:
+  aws:region: us-east-1
+  aws:profile: playground
+  aws:defaultTags:
+    tags:
+      stack: app-api
+      env: dev
+      team: air-tek
+  app-api:org: air-tek
+  app-api:image: air-tek-api
+  app-api:tag: 1.2.0
+  app-api:port: 8080
+  app-api:cpu: 128
+  app-api:memory: 64
+  app-api:max_instances: 2
+  app-api:min_instances: 1

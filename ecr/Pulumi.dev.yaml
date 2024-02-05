@@ -1,9 +1,13 @@
 config:
-  artifacts:config:
-    org_name: technicaldomain
-    repository: air-artifacts
   aws:region: us-east-1
   aws:profile: playground
+  aws:defaultTags:
+    tags:
+      stack: ecr
+      env: dev
+      team: air-tek
+  artifacts:config:
+    org_name: technicaldomain
   tags:config:
     environment: dev
     owner: technicaldomain
@@ -22,25 +26,3 @@ config:
         tag_mutability: MUTABLE
       - name: air-tek-web
         tag_mutability: MUTABLE
-  vpc:config:
-    cidr: 172.17.0.0/16
-    region: us-east-1
-    subnets:
-    - az: us-east-1a
-      cidr: 172.17.0.0/24
-      type: private
-    - az: us-east-1b
-      cidr: 172.17.1.0/24
-      type: private
-    - az: us-east-1d
-      cidr: 172.17.2.0/24
-      type: private
-    - az: us-east-1a
-      cidr: 172.17.3.0/24
-      type: public
-    - az: us-east-1b
-      cidr: 172.17.4.0/24
-      type: public
-    - az: us-east-1d
-      cidr: 172.17.5.0/24
-      type: public

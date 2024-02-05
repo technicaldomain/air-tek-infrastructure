@@ -1,4 +1,3 @@
-# create ecr repositories on pulumi python code
 import pulumi
 import pulumi_aws as aws
 import json
@@ -28,8 +27,11 @@ def create_ecr():
     generic_tags = pulumi.Config("tags").require_object("config")
     for repo in ecr_data["repositories"]:
         s_tags = generic_tags | get_repo_tags(repo) | {"Name": repo["name"]}
-        aws.ecr.Repository(resource_name=repo["name"], name=repo["name"], tags=s_tags)
-    # pulumi.export('repo_name', repo.repository_url)
+        ecr_repo = aws.ecr.Repository(
+            resource_name=repo["name"], name=repo["name"], tags=s_tags
+        )
+        pulumi.export(f"{repo['name']}-url", ecr_repo.repository_url)
+        pulumi.export(f"{repo['name']}-arn", ecr_repo.arn)
 
 
 def create_iam_gh_integration():
@@ -71,3 +73,8 @@ def create_iam_gh_integration():
             role=ecr_role.name,
             policy_arn="arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess",
         )
+
+
+if __name__ == "__main__":
+    create_ecr()
+    create_iam_gh_integration()

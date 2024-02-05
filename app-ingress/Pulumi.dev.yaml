@@ -1,0 +1,10 @@
+config:
+  aws:region: us-east-1
+  aws:profile: playground
+  aws:defaultTags:
+    tags:
+      stack: app-ingress
+      env: dev
+      team: air-tek
+  app-ingress:org: air-tek
+  app-ingress:hostname: web-app-air-tek

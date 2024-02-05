@@ -1,0 +1,7 @@
+name: app-security-group
+runtime:
+  name: python
+  options:
+    virtualenv: ../venv
+description: Shared security group for the app web tier
+

@@ -1,0 +1,9 @@
+config:
+  aws:region: us-east-1
+  aws:profile: playground
+  aws:defaultTags:
+    tags:
+      stack: ssl-cert
+      env: dev
+      team: air-tek
+  ssl-cert:org: air-tek

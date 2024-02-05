@@ -1,6 +1,0 @@
-name: air-tek-infrastructure
-runtime:
-  name: python
-  options:
-    virtualenv: venv
-description: air-tek-infrastructure

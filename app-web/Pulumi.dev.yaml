@@ -1,0 +1,17 @@
+config:
+  aws:region: us-east-1
+  aws:profile: playground
+  aws:defaultTags:
+    tags:
+      stack: app-web
+      env: dev
+      team: air-tek
+  app-web:org: air-tek
+  app-web:image: air-tek-web
+  app-web:tag: 1.2.0
+  app-web:port: 8080
+  app-web:cpu: 128
+  app-web:memory: 64
+  app-web:max_instances: 2
+  app-web:min_instances: 1
+  app-web:api_context_path: WeatherForecast

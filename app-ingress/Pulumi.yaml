@@ -1,0 +1,7 @@
+name: app-ingress
+runtime:
+  name: python
+  options:
+    virtualenv: ../venv
+description: Internet ingress for the Air Tek application.
+

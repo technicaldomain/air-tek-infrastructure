@@ -1,0 +1,6 @@
+name: app-web
+runtime:
+  name: python
+  options:
+    virtualenv: ../venv
+description: Web app service

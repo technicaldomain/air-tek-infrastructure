@@ -1,0 +1,6 @@
+name: ssl-cert
+runtime:
+  name: python
+  options:
+    virtualenv: ../venv
+description: SSL certificate for the app
